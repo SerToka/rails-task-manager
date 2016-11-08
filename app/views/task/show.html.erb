@@ -1,2 +1,10 @@
-<h1>Task#show</h1>
-<p>Find me in app/views/task/show.html.erb</p>
+<h2>@task.name</h2>
+<p><%= @task.date %></p>
+<p><%= @task.name %></p>
+<p><%= @task.done %></p>
+
+<button>
+  <%= link_to "Delete", task_path(task),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
+</button>

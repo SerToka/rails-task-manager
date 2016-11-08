@@ -1,2 +1,12 @@
-<h1>Task#new</h1>
-<p>Find me in app/views/task/new.html.erb</p>
+<%= form_for(@task) do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :done %>
+  <%= f.check_box :done %>
+
+  <%= f.submit %>
+<% end %>
